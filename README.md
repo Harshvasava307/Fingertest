@@ -41,6 +41,8 @@ It’s ideal for students, programmers, and anyone who wants to enhance their ke
 🔗 [Portfolio](https://harsh-vasava-resume-v3.netlify.app)  
 🔗 [LinkedIn](https://linkedin.com/in/harsh-vasava-b8b4)
 
+Need to update this project on Asap Basis if no solutions drawn will be doiing the ai shit 
+
 ---
 
 ⭐ *If you found this project helpful, don’t forget to star the repo!*
