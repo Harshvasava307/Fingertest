@@ -1,0 +1,95 @@
+{
+  "theme": "Cyberpunk Neon",
+  "design_philosophy": {
+    "identity": "E1 - Anti-AI Designer",
+    "core_principles": [
+      "Fusion over Imitation: Mix Cyberpunk with Minimalist Utility",
+      "Emotion First: The user should feel 'In the Zone'",
+      "Content is King: The typing text is the hero",
+      "Negative Space: Use deep void backgrounds to make neon pop",
+      "Contrast: High contrast text for readability, subtle glows for atmosphere"
+    ]
+  },
+  "colors": {
+    "background": "#050505",
+    "surface": "rgba(20, 20, 30, 0.6)",
+    "surface_glass": "rgba(255, 255, 255, 0.03)",
+    "primary": "#00f3ff",
+    "secondary": "#bc13fe",
+    "accent": "#ccff00",
+    "text_main": "#e0e0e0",
+    "text_muted": "#646669",
+    "success": "#00ff9d",
+    "error": "#ff2a6d",
+    "border_glass": "rgba(255, 255, 255, 0.08)"
+  },
+  "typography": {
+    "headings": {
+      "font_family": "'Outfit', sans-serif",
+      "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap",
+      "weight": "700",
+      "letter_spacing": "-0.02em"
+    },
+    "body": {
+      "font_family": "'JetBrains Mono', monospace",
+      "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+      "weight": "400"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "background": "rgba(10, 10, 15, 0.4)",
+      "backdrop_filter": "blur(12px) saturate(180%)",
+      "border": "1px solid rgba(255, 255, 255, 0.08)",
+      "box_shadow": "0 8px 32px 0 rgba(0, 0, 0, 0.5)"
+    },
+    "neon_glow": {
+      "text_shadow": "0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)",
+      "box_shadow": "0 0 15px rgba(0, 243, 255, 0.2)"
+    },
+    "background_image": "https://images.unsplash.com/photo-1588007374946-c79543903e8a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxuZW9uJTIwY3liZXJwdW5rJTIwYWJzdHJhY3QlMjBiYWNrZ3JvdW5kJTIwbWluaW1hbHxlbnwwfHx8fDE3NzE2NzY2NTl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "components": {
+    "layout_strategy": {
+      "home_page": "Use a centralized Grid layout. Remove all <table> tags. Create a Hero section with the title and a grid of 'Mode Cards' for 1min, 2min, etc.",
+      "typing_page": "Center the typing container (wrapper) using Flexbox (min-h-screen, justify-center, align-center). Use the 'Glassmorphism' style for the wrapper."
+    },
+    "buttons": {
+      "base": "padding: 12px 24px; border-radius: 8px; font-family: 'Outfit'; font-weight: 700; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);",
+      "primary": "background: transparent; border: 1px solid #00f3ff; color: #00f3ff; box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);",
+      "hover": "transform: scale(1.05); background: rgba(0, 243, 255, 0.1); box-shadow: 0 0 20px rgba(0, 243, 255, 0.4); text-shadow: 0 0 8px #00f3ff;"
+    },
+    "cards": {
+      "style": "glassmorphism",
+      "hover_effect": "transform: translateY(-5px) scale(1.02); border-color: #bc13fe; box-shadow: 0 10px 40px rgba(188, 19, 254, 0.2);"
+    },
+    "typing_area": {
+      "text_color_default": "#646669",
+      "text_color_correct": "#e0e0e0",
+      "text_color_error": "#ff2a6d",
+      "cursor_color": "#ccff00",
+      "font_size": "1.5rem",
+      "line_height": "1.8"
+    }
+  },
+  "animations": {
+    "float": "@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }",
+    "pulse_glow": "@keyframes pulseGlow { 0% { box-shadow: 0 0 5px rgba(0, 243, 255, 0.2); } 50% { box-shadow: 0 0 20px rgba(0, 243, 255, 0.6); } 100% { box-shadow: 0 0 5px rgba(0, 243, 255, 0.2); } }",
+    "cursor_blink": "@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }"
+  },
+  "universal_guidelines": {
+    "css_reset": "* { margin: 0; padding: 0; box-sizing: border-box; }",
+    "accessibility": "Ensure text contrast ratios are met. Use 'aria-label' on icon buttons. Add 'data-testid' to all interactive elements.",
+    "testing": "All interactive elements MUST include data-testid attributes (e.g., data-testid='start-button', data-testid='typing-input')."
+  },
+  "implementation_steps": [
+    "1. Remove all legacy HTML table layouts.",
+    "2. Create a 'style.css' or update 'index.css'/'typingtest.css' with the new Design System variables and classes.",
+    "3. Apply the Google Fonts to the body.",
+    "4. Refactor the Home Page to use a CSS Grid layout for the mode selection cards.",
+    "5. Refactor the Typing Page to use a Flexbox centered layout with the Glassmorphism wrapper.",
+    "6. Apply the Neon/Cyberpunk color palette.",
+    "7. Add the background image with an overlay to ensure text readability.",
+    "8. Ensure all 'a' tags look like interactive buttons or cards, not just blue text."
+  ]
+}
