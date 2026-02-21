@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits | Finger_Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .credits-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-2xl) var(--space-lg);
+            padding-top: 100px;
+        }
+
+        .credits-card {
+            max-width: 800px;
+            width: 100%;
+            padding: var(--space-2xl);
+            animation: scaleIn 0.6s ease-out;
+        }
+
+        .credits-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .credits-header h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: var(--space-sm);
+        }
+
+        .credits-header h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .credits-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            margin-bottom: var(--space-md);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .profile-name {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: var(--space-xs);
+        }
+
+        .profile-role {
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .info-item {
+            padding: var(--space-md);
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .info-item h3 {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-xs);
+        }
+
+        .info-item p {
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            margin-top: var(--space-xs);
+        }
+
+        .tech-badge {
+            padding: 4px 12px;
+            background: rgba(188, 19, 254, 0.1);
+            border: 1px solid rgba(188, 19, 254, 0.3);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--secondary);
+        }
+
+        .story-text {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .back-link {
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .back-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-sm) var(--space-lg);
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 12px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            transition: all var(--transition-smooth);
+        }
+
+        .back-link a:hover {
+            background: rgba(0, 243, 255, 0.1);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .credits-content {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-section {
+                margin-bottom: var(--space-lg);
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background Shapes -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" data-testid="main-navigation">
+        <a href="Index.html" class="nav-logo" data-testid="nav-logo">
+            Finger<span>_Test</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="Index.html" data-testid="nav-home">Home</a></li>
+            <li><a href="credits.html" data-testid="nav-credits">Credits</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="credits-container" data-testid="credits-container">
+        <div class="credits-card glass-card" data-testid="credits-card">
+            <div class="credits-header">
+                <h1>Project <span>Credits</span></h1>
+                <p style="color: var(--text-muted);">The story behind Finger_Test</p>
+            </div>
+
+            <div class="credits-content">
+                <div class="profile-section">
+                    <img src="profile.jpg" alt="Harsh Vasava" class="profile-image" data-testid="profile-image">
+                    <div class="profile-name">Harsh Vasava</div>
+                    <div class="profile-role">BCA Student & Developer</div>
+                </div>
+
+                <div class="info-section">
+                    <div class="info-item">
+                        <h3><i class="fas fa-calendar"></i> Timeline</h3>
+                        <p>Created: 18th February 2023<br>Deployed: 20th February 2023</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                        <div class="tech-stack">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <h3><i class="fas fa-lightbulb"></i> Story Behind The Project</h3>
+                        <p class="story-text">
+                            "I'm currently in my 1st Year of college, passionate about HTML, CSS, and JavaScript. 
+                            As someone focused on improving my own typing speed, the idea for this project came naturally. 
+                            I may expand on this concept in the future, but for now, I've given it my best. Thank you for visiting!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-link">
+                <a href="Index.html" data-testid="back-home-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Homepage
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
